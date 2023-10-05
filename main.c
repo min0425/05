@@ -4,16 +4,28 @@
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	int i,a;
-	int sum=0;
+	int answer=59;
+	int input;
+	int trial=0;
+	
+	do
+	{printf("Guess a number :");
+	scanf("%i",&input);
+	
+	if(input<answer)
+	{printf("low\n");
+	}
+	else if(input>answer)
+	{printf("high\n");
+	 } 
+
+	trial=trial+1;
+	}
+	while(input!=answer);
+	
+	printf("Congratulation! trials : %i \n",trial);
 
 	
-	printf("Input a number : ");
-	scanf("%i",&a);
-	
-	for(i=0; i<=a; i++)
-	sum+=i;
-	printf("THe result is %i",sum);
 	
 	return 0;
 }
